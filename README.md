@@ -1,0 +1,2 @@
+# CareerCoach
+We help users find the right career path based on their interests and skills. We also offer related resources, depending on their location and other factors.
