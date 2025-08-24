@@ -9,7 +9,6 @@
     * College stundets
     * New graduates
 
-
 - Tech Stack
     * Front-End: React with tailwind
     * Back-End: Node.js with express
