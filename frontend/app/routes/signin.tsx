@@ -2,20 +2,45 @@ import { Link } from "react-router-dom";
 export default function Signin() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ">
-                CareerCouch
-              </h1>
-            </div>
-            <div className="flex items-center space-x-12">
-              
-            </div>
+      {/* Header Section */}
+      {/* Header Section */}
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+          {/* Logo / Title */}
+          <Link to="/" className="flex items-center space-x-2">
+            <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition">
+              CareerCouch
+            </h1>
+          </Link>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link
+              to="/"
+              className="text-gray-700 hover:text-blue-600 font-medium transition"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-gray-700 hover:text-blue-600 font-medium transition"
+            >
+              About
+            </Link>
+            <Link
+              to="/career"
+              className="text-gray-700 hover:text-blue-600 font-medium transition"
+            >
+              Career
+            </Link>
+          </nav>
+
+          {/* Mobile Menu (optional placeholder) */}
+          <div className="md:hidden">
+            {/* later you can add a mobile menu button (hamburger) here */}
           </div>
         </div>
-      </div>
+      </header>
       {/* Main Content Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
