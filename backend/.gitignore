@@ -1,0 +1,19 @@
+# Node modules (huge folder, don’t push to git)
+node_modules/
+
+# Environment variables (secrets like DB password, API keys)
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output (if you use transpilers like TypeScript or bundlers)
+dist/
+build/

@@ -107,7 +107,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="group hover:shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:-translate-y-1">
               <div className="text-center pb-2 pt-3">
-                <p className="text-lg mb-2">AI-Power Assesment</p>
+                <p className="text-lg mb-2">AI-Power Assessment</p>
               </div>
             </div>
             <div className="group hover:shadow-xl transition-all duration-300 bg-white/70 backdrop-blur-sm border-0 shadow-lg hover:-translate-y-1">
