@@ -2,7 +2,7 @@ const express = require('express'); // Importing the Express framework
 const cors = require('cors'); // Importing CORS middleware for handling cross-origin requests
 const helmet = require('helmet'); // Importing Helmet for securing HTTP headers
 const morgan = require('morgan'); // Importing Morgan for logging HTTP requests
-const { connectDB } = require('./config/db'); // Importing the database connection function
+//const { connectDB } = require('./config/db'); // Importing the database connection function
 
 require('dotenv').config(); // Importing dotenv to load environment variables
 

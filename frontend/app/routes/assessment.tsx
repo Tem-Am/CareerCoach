@@ -1,0 +1,32 @@
+import { Link } from "react-router";
+export default function Assessment() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Header Section */}
+      {/* Header Section */}
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+          {/* Logo / Title */}
+          <Link to="/" className="flex items-center space-x-2">
+            <h1 className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition">
+              CareerCouch
+            </h1>
+          </Link>
+
+        
+
+          {/* Mobile Menu (optional placeholder) */}
+          <div className="md:hidden">
+            {/* later you can add a mobile menu button (hamburger) here */}
+          </div>
+        </div>
+      </header>
+      {/* Main Content Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <p> Add stuff here</p>
+        </div>
+      </section>
+    </div>
+  );
+}

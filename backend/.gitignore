@@ -12,6 +12,8 @@ pnpm-debug.log*
 
 # OS files
 .DS_Store
+.vscode/
+logs/
 Thumbs.db
 
 # Build output (if you use transpilers like TypeScript or bundlers)

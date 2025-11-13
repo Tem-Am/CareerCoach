@@ -5,5 +5,6 @@ export default [
     route("about","routes/about.tsx"),
     route("career","routes/career.tsx"),
     route("signin","routes/signin.tsx"),
+    route("assessment","routes/assessment.tsx"),
     // nester can be done by route and layout 
 ] satisfies RouteConfig;

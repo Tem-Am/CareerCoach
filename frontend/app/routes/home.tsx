@@ -1,7 +1,11 @@
-import { useNavigate } from "react-router";
 import { Link } from "react-router";
+import { Outlet } from "react-router";
+import { useState } from "react";
+import ChatBoxUI from "../../components/chatbot";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header Section */}
@@ -60,29 +64,32 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Link
-                to={"/"}
+                to={"/assessment"}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 rounded-full"
               >
                 Start Career Assessment
               </Link>
-              <Link
-                to={"/"}
+              <button
+                onClick={() => setOpen(true)}
                 className="bg-white border border-gray-300 hover:bg-gray-100 text-gray-800 px-8 py-6 rounded-full shadow-sm transition-colors duration-200"
               >
                 Chat with AI Career Coach
-              </Link>
+              </button>
+              {open && (
+                  <ChatBoxUI/>
+              )}
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">50K+</div>
+                <div className="text-3xl font-bold text-blue-600">0</div>
                 <div className="text-gray-600">Students Helped</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">500+</div>
+                <div className="text-3xl font-bold text-green-600">0</div>
                 <div className="text-gray-600">Career Paths</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">98%</div>
+                <div className="text-3xl font-bold text-purple-600">100%</div>
                 <div className="text-gray-600">Satisfaction Rate</div>
               </div>
               <div className="text-center">
@@ -95,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Helper Section */}
-      <section className="py-20 px-4 bg-white/50 backdrop-blur-sm">
+      <section className="py-20 px-4 bg-white/50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">How We Help You Succeed</h2>
@@ -123,6 +130,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* Footer Section */}
       <footer className="bg-gray-900 text-white py-16 px-4">
         <div className="container mx-auto">
@@ -168,6 +176,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <Outlet />
     </div>
   );
 }
