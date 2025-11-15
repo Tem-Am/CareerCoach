@@ -38,7 +38,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 // Outlet is where nested routes will render.
 // anything will show up in every page.
 export default function App() {
-  return <Outlet />;
+  return (
+      <Outlet />
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

@@ -5,7 +5,6 @@ import ChatBoxUI from "../../components/chatbot";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header Section */}
@@ -75,9 +74,7 @@ export default function Home() {
               >
                 Chat with AI Career Coach
               </button>
-              {open && (
-                  <ChatBoxUI/>
-              )}
+              {open && <ChatBoxUI onClose={() => console.log("Closing chat")} />}
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
               <div className="text-center">
@@ -139,7 +136,7 @@ export default function Home() {
               <div className="flex items-center space-x-2 mb-4">
                 <span className="text-xl font-bold">CareerCompass</span>
               </div>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-xs">
                 Empowering the next generation to find meaningful careers
                 through AI-powered guidance.
               </p>
@@ -164,7 +161,6 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Help Center</li>
                 <li>Contact Us</li>
                 <li>Privacy Policy</li>
                 <li>Terms of Service</li>
@@ -172,7 +168,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 CareerCompass. All rights reserved.</p>
+            <p>&copy; 2025 CareerCouch. All rights reserved.</p>
           </div>
         </div>
       </footer>
